@@ -1,0 +1,67 @@
+/*Title*/
+h1{
+    color:rgb(14, 54, 149);
+    text-align: center; 
+}
+
+hr{/*horizontal line to be used on the title page*/
+    border-top: 5px solid rgb(14, 18, 149);
+}
+
+#pic{
+    width: 20% /*each cell will cover half of the table*/
+    
+}
+
+/*#pic:hover{ 
+    background-image: url('https://www.bing.com/th/id/OGC.98683a77ec0f8a7c1cfd3313be970c38?pid=1.7&rurl=http%3a%2f%2fcdn.wallpapersafari.com%2f11%2f33%2fEaO4ew.gif&ehk=NWP3%2fXG6OU2ASmnOcEWDD7geKTDr9BtXC020pB6PXZo%3d');    
+    background-attachment: fixed;
+    background-size: cover;
+}*/
+
+#info{
+    line-height: 1.5em; /*line spacing/separation from the top to bottom*/
+}
+
+a{
+    text-decoration: none; /*to remove the underline from the links*/
+    color: blue;
+}
+
+a:hover{ /*color that hovers over the link*/
+    color: brown;
+}
+
+/*set page background color*/
+body{
+    /*background-color: rgb(253,245,223);*/
+    background-image: url('https://th.bing.com/th/id/OIP.8tEjWyySWfTnrwWcRMszfwHaFj?w=246&h=184&c=7&r=0&o=5&dpr=1.5&pid=1.7');
+    background-repeat: no-repeat; /*to set only one picture*/
+    background-attachment: fixed; /*to keep the exact size of the photo*/
+    background-size: cover; /*to cover the whole webpage with the image*/
+
+    padding-right: 170px; /*adjusting my content body to align with the right*/
+    padding-left: 5px; /*adjusting the content body to align with the left side of the webpage*/
+}
+
+h2{ /*for all headers to be used in this setup*/
+    color:rgb(14, 14, 149);
+    text-align: center; 
+    border-bottom: 1px solid; 
+    margin-top: 1.2em;
+}
+
+.sidebar{
+    position:fixed; /*side bar does not move*/
+    top:0;
+    right:0;
+
+    width:150px;
+    height: 100%;
+    background-color: rgb(253,245,223);
+    padding-top: 20px;
+    padding-left: 15px;
+    line-height: 1.85em;
+    font-size: 1.1em;
+
+}
