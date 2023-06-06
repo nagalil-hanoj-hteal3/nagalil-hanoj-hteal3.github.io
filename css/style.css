@@ -1,0 +1,46 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+h1{
+    text-align: center; 
+    font-family: Impact;
+}
+
+.navbar{
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.insta-logo{
+    height: 30px;
+}
+
+.linkedin-logo{
+    height: 30px;
+} 
+
+.facebook-logo{
+    height: 30px;
+}
+
+#ej-info{
+    font-family: 'Gill Sans';
+}
+
+#team-table{
+    text-align: center;
+}
+
+.typing-text{
+    font-family: 'Trebuchet MS'; 
+    font-size: medium;
+}
+
+.header{
+    text-align: center; 
+    font-family:'Gill Sans'
+}
