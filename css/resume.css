@@ -22,3 +22,8 @@ h1{
 label{
     font-family: 'Gill Sans';
 }
+
+.typing-text{
+    white-space: pre-line;
+    font-family: 'Courier New';
+}
