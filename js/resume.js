@@ -1,5 +1,7 @@
 // JavaScript code to create auto-typing effect
 const textElement = document.querySelector('.typing-text');
+const skipButton = document.querySelector('.skip-button');
+
 const text = `Hey there!👋👋\n\nAttached is my resume that highlights my experience consisting of my leadership, work experience, ` +
 `and relevant projects I completed in school. Throughout my career, I have continually shown a dedication to ` +
 `quality throughout my experience by providing great outcomes in teamwork and individual growth.\n\nPrior to working, I started as a cadet in Detachment 075 for the Air Force ROTC. ` +
@@ -8,7 +10,9 @@ const text = `Hey there!👋👋\n\nAttached is my resume that highlights my exp
 `everyday situations. Unfortunately, I would not be able to stay longer due to commute and time conflicts, which led me to be discharged from the program, however, relate and applying ` +
 `necessary skills and teachings my colleagues and peers have taught me will be the biggest lesson that I can ever ask.` +
 `\n\nAs I no longer had any training, I started working in my school as a STEM SC tutor to assist and teach students in computer science in a range of beginner to advanced courses. ` +
-`` +
+`This opportunity would allow me to regain my past learning and effectively give the necessary tools and advice for the students. Not only am I A tutor, but also a grader for an upper  ` +
+`division course called Operating Systems. Given the knowledge that I know about that course and the projects that reflect off it allowed me to be more flexible with other tasks. Moreover, gaining ` +
+`this knowledge lets me more exposed to a variety of scenarios that can be appear in a blink of an eye varying from all sorts of levels. ` +
 `\n\nCurrently, the projects that I did consist of the following.\n1.) In my BookEZ project this involved Java and MySQL, which considered a PDF API to read files that are ` + 
 `read into the GUI to display the following receipts from eBay into an ROI (Return on Investment) Table that can be sorted and ` + 
 `imported. In addition, it runs concurrently with MySQL database to consistently update the following items from the GUI and database ` +
@@ -24,14 +28,29 @@ const text = `Hey there!👋👋\n\nAttached is my resume that highlights my exp
 `This project allowed me to practice with pair programming that can easily strengthen and improve our focus to implement the project.\nAlbeit that the number of projects that I did `+
 `are minimal, this would give me a chance to build on learning all possible outlets that I can expose myself with and later on reference to in the future.`;
 
+let skip = false; // Flag variable to track if skip button is clicked
+
 function type() {
     let substring = text.substring(0, index);
     textElement.textContent = substring;
     index++;
-    if (index <= text.length) {
+    if (index <= text.length && !skip) {
         setTimeout(type, 35); // Adjust typing speed (milliseconds)
+    } else{
+        skipButton.style.display = 'none'; //hide the skip button
     }
 }
+
+// Function to skip the typing animation
+function skipTyping() {
+    skip = true;
+    textElement.textContent = text;
+    index = text.length; // Set the index to the end of the text
+    skipButton.style.display = 'none';
+}
+
+// Attach event listener to the skip button
+skipButton.addEventListener('click', skipTyping);
 
 // Start the auto-typing effect
 let index = 0;
