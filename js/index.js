@@ -1,6 +1,6 @@
 // JavaScript code to create auto-typing effect
 const textElement = document.querySelector('.typing-text');
-const text = "Welcome to my website";
+const text = "Welcome to my website. Pick any of the following below to learn more about me.";
 let index = 0;
 
 function type() {

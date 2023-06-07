@@ -22,16 +22,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 <body>
-    <nav class="navbar bg-light" data-bs-theme="light">
+    <!-- <nav class="navbar bg-light" data-bs-theme="light">
         <div class="container-fluid" style="font-family: 'Times New Roman', Times, serif; ">
             <label class="navbar-brand mb-0 h1" style="font-size: 25px;">
             EJ's Website</label>
             
             <nav class="navbar navbar-expand-xxxl"> 
-                <!-- bg-body-tertiary -->
                 <div class="container">
                 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,15 +61,12 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="resume.html">Resume</a>
-                                <!-- <embed src="Resume_LilaganElaeth.pdf" type="application/pdf"> -->
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="before.html">Website Before</a>
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" aria-current="page" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                                    <!-- <img src="/images/cancel.png" width="30" height="30"> -->
-                                    <!-- <i class="bi bi-x" style="font-size: 20px;"></i> -->
                                     <button type="button" class="btn-close" aria-label="Close"></button>
                                 </a>
                             </li>
@@ -78,16 +75,71 @@
                 </div>
             </nav>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- Contents after the nav bar -->
     <div class="container-fluid">
+
         <div>
             <br><h1 class="header">Greetings!</h1>
         </div>
-        <div class="container-md">
-            <h1 class="typing-text mt-4"></h1>
-        </div>
+
+        <table class="table align-middle table-borderless">
+            <thead>
+                <th colspan="4"><h1 class="typing-text mt-4"></h1></th>
+            </thead>
+            <tbody> 
+                <tr>
+                    <div class="row">
+                        <td class="col-sm-3"> <!-- another way of saying 25%, 3/12 -->
+                            <div class="card">
+                                <!-- Card content goes here -->
+                                <img src="/file/school.jpg" class="card-img-top" alt="Image 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">My Education</h5>
+                                    <p class="card-text">To find out more about my academic background.</p>
+                                    <a href="school.html" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-3">
+                            <div class="card">
+                                <!-- Card content goes here -->
+                                <img src="/file/school.jpg" class="card-img-top" alt="Image 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Who I Am</h5>
+                                    <p class="card-text">Visit this page to learn more about who I am.</p>
+                                    <a href="about-me.html" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-3">
+                            <div class="card">
+                                <!-- Card content goes here -->
+                                <img src="/file/functional-resume.png" class="card-img-top" alt="Image 1" height="92px">
+                                <div class="card-body">
+                                    <h5 class="card-title">Resume</h5>
+                                    <p class="card-text">To find out more about my experience.</p>
+                                    <a href="resume.html" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-3">
+                            <div class="card">
+                                <!-- Card content goes here -->
+                                <img src="/file/connect.jpg" class="card-img-top" alt="Image 1" >
+                                <div class="card-body">
+                                    <h5 class="card-title">Contact Me</h5>
+                                    <p class="card-text">To stay in touch with me, check this page.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
 
     <footer class="text-center">
