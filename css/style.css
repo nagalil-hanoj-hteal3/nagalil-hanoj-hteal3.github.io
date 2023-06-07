@@ -45,6 +45,15 @@ h1{
     font-family:'Gill Sans'
 }
 
-th {
-    text-align: center;
+.card-img-top{
+    height: 35vh;
+}
+
+.date-type{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
+.card-title{
+    font-weight: 600;
 }
