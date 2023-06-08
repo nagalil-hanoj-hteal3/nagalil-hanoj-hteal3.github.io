@@ -16,7 +16,7 @@ h1{
 }
 
 .typing-text{
-    font-family: 'Trebuchet MS'; 
+    font-family:Georgia, 'Times New Roman', Times, serif; 
     font-size: medium;
 }
 
@@ -63,7 +63,7 @@ h1{
     }
     
     .typing-text {
-      font-family: 'Trebuchet MS';
+      font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 16px;
     }
     

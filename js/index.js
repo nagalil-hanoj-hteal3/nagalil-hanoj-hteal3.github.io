@@ -1,5 +1,5 @@
 const textElement = document.querySelector('.typing-text');
-const text = "Welcome to my website. Pick any of the following below to learn more about me.";
+const text = "Thank you for visiting my webpage. It is my pleasure to have you here and feel free to discover more about me, choose one of the options below.";
 
 let index = 0;
 

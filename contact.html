@@ -72,6 +72,142 @@
 
     <!-- Content after nav bar -->
     <label>To be added</label>
+
+    <div class="container-fluid">
+        <div class="container-md">
+            <h1 class="typing-text mt-4"></h1>
+        </div>
+        
+        <script>
+            // JavaScript code to create auto-typing effect
+            const textElement = document.querySelector('.typing-text');
+            const text = "";
+            let index = 0;
+        
+            function type() {
+                if (index < text.length) {
+                    textElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 50); // Adjust typing speed (milliseconds)
+                }
+            }
+        
+            // Start the auto-typing effect
+            type();
+        </script> 
+    <!-- <tr>
+        <div class="row">
+            <td class="col-sm-3"> another way of saying 25%, 3/12
+                <div class="card">
+                    Card content goes here
+                    <img src="/file/school.jpg" class="card-img-top" alt="Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">My Education</h5>
+                        <p class="card-text" style="font-size: 13px;">To find out more about my academic background.</p>
+                        <a href="school.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </td>
+            <td class="col-sm-3">
+                <div class="card">
+                    Card content goes here
+                    <img src="/file/who.jpg" class="card-img-top" alt="Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">About Me</h5>
+                        <p class="card-text" style="font-size: 13px;">Visit this page to discover more about who EJ is.</p>
+                        <a href="about-me.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </td>
+            <td class="col-sm-3">
+                <div class="card">
+                    Card content goes here
+                    <img src="/file/resume.jpg" class="card-img-top" alt="Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Resume</h5>
+                        <p class="card-text" style="font-size: 13px;">To find out more about my experience, click here.</p>
+                        <a href="resume.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </td>
+            <td class="col-sm-3">
+                <div class="card">
+                    Card content goes here
+                    <img src="/file/connect.jpg" class="card-img-top" alt="Image 4" >
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Me</h5>
+                        <p class="card-text" style="font-size: 13px;">To stay in touch, check out this page for more information.</p>
+                        <a href="contact.html" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </td>
+        </div>
+    </tr>
+    <tr>
+        <td colspan="4"><h2 class="date-type text-center"></h2></td>
+    </tr> -->
+
     
+        <br><table class="table align-middle table-borderless table-l">
+            <tbody>
+                <tr>
+                    <div class="row">
+                        <td class="col-sm-3">  <!-- another way of saying 25%, 3/12 -->
+                            <div class="card text-center">
+                                <!-- Card content goes here -->
+                                <a href="https://www.linkedin.com/in/elaeth-jonah-lilagan/" target="_blank">
+                                    <img src="/file/linkedin.png" alt="LinkedIn Logo" class="linkedin-logo mt-2">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">LinkedIn</h5>
+                                    <p class="card-text" style="font-size: 13px;">Visit this page to discover more about who EJ is.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-3">
+                            <div class="card text-center">
+                                <!-- Card content goes here -->
+                                <a href="https://www.facebook.com/elaethjonah.lilagan/">
+                                    <img src="/file/Facebook-logo.png" alt="Facebook logo" class="facebook-logo mt-2">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Facebook</h5>
+                                    <p class="card-text" style="font-size: 13px;">Visit this page to discover more about who EJ is.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-3">
+                            <div class="card text-center">
+                                <!-- Card content goes here -->
+                                <a href="https://instagram.com/nagalil.hanoj.hteal3?igshid=OGQ5ZDc2ODk2ZA==">
+                                    <img src="/file/instagram-logo.png" alt="Insta Logo" class="insta-logo mt-2">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Instagram</h5>
+                                    <p class="card-text" style="font-size: 13px;">To find out more about my experience, click here.</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="col-sm-3">
+                            <div class="card text-center">
+                                <!-- Card content goes here -->
+                                <a href="https://github.com/nagalil-honaj-hteal3" target="_blank">
+                                    <img src="/file/github.png" alt="GitHub Logo" class="github-logo mt-2">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">GitHub</h5>
+                                    <p class="card-text" style="font-size: 13px;">To stay in touch, check out this page for more information.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </div>
+                </tr>
+                <!-- <tr>
+                    <td class="text-center"><img src="/images/Team/ej.jpg" class="img-fluid" alt="Women-1" width="75%"></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>    
+
 </body>
 </html>

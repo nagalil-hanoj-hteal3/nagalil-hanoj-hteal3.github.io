@@ -16,15 +16,19 @@ h1{
 }
 
 .insta-logo{
-    height: 30px;
+    height: 100px;
 }
 
 .linkedin-logo{
-    height: 30px;
+    height: 100px;
 } 
 
 .facebook-logo{
-    height: 30px;
+    height: 100px;
+}
+
+.github-logo{
+    height: 100px;
 }
 
 #ej-info{
