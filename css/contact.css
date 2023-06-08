@@ -10,6 +10,11 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+.typing-text{
+    white-space: pre-line;
+    font-family: Georgia;
+}
+
 .insta-logo{
     height: 100px;
 }
@@ -24,6 +29,20 @@
 
 .github-logo{
     height: 100px;
+}
+
+.card-title{
+    font-weight: 600;
+}
+
+.card{
+    transition: transform 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    border-color:black;
+    border-width: 5px;
 }
 
 /* Styles for phone screens */
