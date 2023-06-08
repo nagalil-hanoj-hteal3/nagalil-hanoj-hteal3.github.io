@@ -15,26 +15,6 @@ h1{
     font-family: 'Times New Roman', Times, serif;
 }
 
-.insta-logo{
-    height: 30px;
-}
-
-.linkedin-logo{
-    height: 30px;
-} 
-
-.facebook-logo{
-    height: 30px;
-}
-
-#ej-info{
-    font-family: 'Gill Sans';
-}
-
-#team-table{
-    text-align: center;
-}
-
 .typing-text{
     font-family: 'Trebuchet MS'; 
     font-size: medium;
@@ -45,10 +25,6 @@ h1{
     font-family:'Gill Sans'
 }
 
-/* .card-img-top{
-    height: 35vh;
-} */
-
 .date-type{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: underline;
@@ -57,3 +33,45 @@ h1{
 .card-title{
     font-weight: 600;
 }
+
+/* Styles for small screens (phones) */
+@media only screen and (max-width: 767px) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+    h1 {
+      text-align: center;
+      font-family: Impact;
+      font-size: 24px;
+    }
+    
+    .navbar {
+      box-shadow: none;
+    }
+    
+    .container-fluid {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    
+    .typing-text {
+      font-family: 'Trebuchet MS';
+      font-size: 16px;
+    }
+    
+    .header {
+      text-align: center;
+      font-family: 'Gill Sans';
+    }
+    
+    .date-type {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: underline;
+    }
+    
+    .card-title {
+      font-weight: 600;
+    }
+    
+    /* Other styles specific to phones */
+  }

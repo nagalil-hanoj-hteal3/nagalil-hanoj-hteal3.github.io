@@ -14,3 +14,23 @@ h1{
 .container-fluid{
     font-family: 'Times New Roman', Times, serif;
 }
+
+.insta-logo{
+    height: 30px;
+}
+
+.linkedin-logo{
+    height: 30px;
+} 
+
+.facebook-logo{
+    height: 30px;
+}
+
+#ej-info{
+    font-family: 'Gill Sans';
+}
+
+#team-table{
+    text-align: center;
+}
