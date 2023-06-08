@@ -42,7 +42,7 @@
 .card:hover{
     transform: scale(1.05);
     border-color:black;
-    border-width: 5px;
+    border-width: 3px;
 }
 
 /* Styles for phone screens */

@@ -2,11 +2,6 @@
     display: none;
 }
 
-h1{
-    text-align: center; 
-    font-family: Impact;
-}
-
 .navbar{
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
@@ -16,13 +11,14 @@ h1{
 }
 
 .typing-text{
-    font-family:Georgia, 'Times New Roman', Times, serif; 
-    font-size: medium;
+    font-family: Georgia; 
+    font-size: 20px;
 }
 
 .header{
     text-align: center; 
-    font-family:'Gill Sans'
+    font-family:'Gill Sans';
+    font-weight: 800;
 }
 
 .date-type{
@@ -43,6 +39,7 @@ h1{
 
 .card:hover{
     transform: scale(1.05);
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Styles for small screens (phones) */

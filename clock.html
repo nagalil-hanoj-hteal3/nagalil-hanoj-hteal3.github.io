@@ -29,55 +29,18 @@
 
 </head>
 <body>
-    <nav class="navbar bg-light" data-bs-theme="light">
-        <div class="container-fluid" style="font-family: 'Times New Roman', Times, serif; ">
-            <label class="navbar-brand mb-0 h1" style="font-size: 25px; text-decoration: line-through;">
-            Clock</label>
-            
-            <nav class="navbar navbar-expand-xxxl"> 
-                <!-- bg-body-tertiary -->
-                <div class="container">
-                
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="index.html">Home Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="school.html">EJ's Academic Background</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="about-me.html">Who is EJ?</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="resume.html">EJ's Resume</a>
-                                <!-- <embed src="Resume_LilaganElaeth.pdf" type="application/pdf"> -->
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="before.html">Website Before</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
-                                    <!-- <img src="/images/cancel.png" width="30" height="30"> -->
-                                    <!-- <i class="bi bi-x" style="font-size: 20px;"></i> -->
-                                    <button type="button" class="btn-close" aria-label="Close"></button>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </nav>
-
-    <!-- content after nav bar -->
+    
     <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; background-image: url('/file/matrix.gif');">
-        <a href="index.html" style="text-decoration: none; color: transparent;"><h1 class="clock center-align" style="color: green"></h1></a>
+        <a href="#" onclick="showAlert()" style="text-decoration: none; color: transparent; pointer-events: auto;">
+            <h1 class="clock center-align" style="color: green; font-size: 100px;"></h1>
+        </a>
+    
+        <!-- Secret Button -->
+        <div class="secret-button">
+            <a href="index.html" id="secret-link" style="font-size: 3px;">Secret</a>
+        </div>
     </div>
 
+    
 </body>
 </html>
