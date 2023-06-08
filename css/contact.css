@@ -2,11 +2,6 @@
     display: none;
 }
 
-h1{
-    text-align: center; 
-    font-family: Impact;
-}
-
 .navbar{
     box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
 }
@@ -31,10 +26,14 @@ h1{
     height: 100px;
 }
 
-#ej-info{
-    font-family: 'Gill Sans';
-}
+/* Styles for phone screens */
+@media only screen and (max-width: 600px) {
 
-#team-table{
-    text-align: center;
+    .insta-logo,
+    .linkedin-logo,
+    .facebook-logo,
+    .github-logo {
+        height: 50px;
+    }
+
 }
