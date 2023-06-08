@@ -27,7 +27,8 @@ h1{
 
 .date-type{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    text-decoration: underline;
+    text-decoration: none;
+    color: black;
 }
 
 .card-title{

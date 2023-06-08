@@ -1,0 +1,11 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar{
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid{
+    font-family: 'Times New Roman', Times, serif;
+}
