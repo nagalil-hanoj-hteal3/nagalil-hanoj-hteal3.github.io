@@ -45,22 +45,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home Page</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle disabled" href="#" role="button" data-bs-toggle="dropdown">Women</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/html/women_top.html">Women Top</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/html/women_bottom.html">Women Bottom</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle disabled" href="#" role="button" data-bs-toggle="dropdown">Men</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/html/men_top.html">Men Top</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/html/men_bottom.html">Men Bottom</a></li>
-                                </ul>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about-me.html">About EJ</a>
                             </li>
@@ -86,29 +70,58 @@
     </nav>
 
     <!-- Content after nav bar -->
-    <br><div class="container-fluid fade-in">
-        <div class="card">
-            <table class="eagle table-borderless">
-                <tr colspan="2">
-                    <td class="hs-logo-pic text-center">
-                        <!-- Card content here -->
-                        <a href="https://olh.sweetwaterschools.org/" target="_blank">
-                            <img src="/file/hs-logo.png" alt="High School Logo" class="hs-logo mt-2">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Main content here -->
-                    <td class="content">
-                        <!-- <div class="content"></div> -->
-                        <h5 class="card-title text-center mt-2">Olympian High School</h5>
-                        <!-- <p class="card-text text-center" style="font-size: 20px;">Visit EJ's LinkedIn page</p> -->
-                        <p class="fresh-text mt-4"></p>
-                        <button onclick="skipTyping()" class="skip-button border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
-                    </td>
-                </tr>
-            </table>
-            
+    <br>
+    <div class="container fade-in">
+        <div class="card-wrapper">
+            <div class="card card1" style="display: block;">
+                <div class="table1-wrapper">
+                    <table class="eagle table-borderless">
+                        <tr>
+                            <td class="text-center">
+                                <!-- Card content here -->
+                                <a href="https://olh.sweetwaterschools.org/" target="_blank">
+                                    <img src="/file/hs-logo.png" alt="High School Logo" class="hs-logo mt-2">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Main content here -->
+                            <td class="content">
+                                <!-- <div class="content"></div> -->
+                                <h5 class="hs-card-title text-center mt-2">Olympian High School</h5>
+                                <!-- <p class="card-text text-center" style="font-size: 20px;">Visit EJ's LinkedIn page</p> -->
+                                <!-- <div class="mouse-follower"> -->
+                                <!-- <p class="fresh-text mt-4"></p> -->
+                                <!-- </div> -->
+                                <button onclick="skipTyping()" class="skip-button border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>   
+            </div>
+
+            <div class="card card2" style="display: block;">
+                <div class="table2-wrapper">
+                    <table class="csusm table-borderless">
+                        <tr>
+                            <td class="text-center">
+                                <!-- Card content here -->
+                                <a href="https://www.csusm.edu/" target="_blank">
+                                    <img src="/file/csusm.png" alt="University Logo" class="csusm-logo mt-2">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Main content here -->
+                            <td class="content">
+                                <h5 class="csusm-card-title text-center mt-2">California State University San Marcos</h5>
+                                    <p class="fresh-text mt-4"></p>
+                                <!-- <button onclick="skipTyping()" class="skip-button border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
+                            </td>
+                        </tr>
+                    </table>
+                </div>     
+            </div>
             <!-- other table for southwestern for summer -->
             
             <!-- other table for csusm -->
@@ -125,9 +138,11 @@
                 </tr>
             </table> -->
         </div>
-
         
     </div>
+
+<button class="prev-button">&larr; Previous</button>
+<button class="next-button">Next &rarr;</button>
 
 </body>
 </html>

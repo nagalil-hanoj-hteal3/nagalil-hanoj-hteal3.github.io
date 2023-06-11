@@ -15,36 +15,72 @@ h1{
     white-space: pre-line;
     font-family: Georgia;
     font-size: 18px;
-}
-
-.soph-text{
-    white-space: pre-line;
-    font-family: Georgia;
-    font-size: 18px;
+    color: black;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .container-fluid{
     font-family: 'Times New Roman', Times, serif;
 }
 
-.card {
-    position: fixed;
-    top: 0;
-    left: 0;
+.container{
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
     width: 100%;
-    height: 100%;
+    /* height: 400px;  */
+    /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.card-wrapper {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card {
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+
     background-color: transparent;
     z-index: 2;
     transition: opacity 0.5s ease;
 }
 
-.eagle{
-    background-color:aqua;
+.hide {
+    display: none;
 }
 
-.hs-logo-pic{
-    /* width: 100%; */
-    height: 100%;
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 16px;
+}
+
+.prev-button {
+    left: 10px;
+  }
+  
+.next-button {
+    right: 10px;
+}
+
+.table1-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.eagle{
+    background-color:aqua;
+    width: max-content;
+    margin: 0 auto;
 }
 
 .hs-logo{
@@ -52,23 +88,45 @@ h1{
     /* margin-left: 15px; */
 }
 
-.card-title{
+.hs-card-title{
     /* font-style: ; */
     font-weight: 900;
     text-decoration: underline;
     font-size: 3em;
 }
 
-.trig-logo-pic{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 100%;
+.csusm{
+    background-color: rgb(63, 129, 244);
+    width: max-content;
+    margin: 0 auto;
 }
 
-.trig-pic{
-    width: 70%;
+.csusm-logo{
+    width: 30%; /* size of the picture */
+    /* margin-left: 15px; */
+}
+
+.csusm-card-title{
+    /* font-style: ; */
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 3em;
+}
+
+.table2-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;   
+}
+
+.card2 {
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+    transition: opacity 0.5s ease;
 }
 
 .fade-in {
@@ -84,8 +142,3 @@ h1{
         opacity: 1;
     }
 }
-  
-/* .content { */
-    /* padding-top: 20px;  */ /* Adjust to card's height */
-    /* background-color: ;
-} */
