@@ -95,6 +95,18 @@ type1();
 const cardWrapper = document.querySelector('.card-wrapper');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
+
+window.addEventListener('scroll', function() {
+// Check if the user has scrolled enough to show the buttons
+if (window.scrollY > 100) {
+    prevButton.style.opacity = '1';
+    nextButton.style.opacity = '1';
+  } else {
+    prevButton.style.opacity = '0';
+    nextButton.style.opacity = '0';
+  }
+});
+
 const cards = Array.from(cardWrapper.getElementsByClassName('card'));
 let currentIndex = 0;
 
