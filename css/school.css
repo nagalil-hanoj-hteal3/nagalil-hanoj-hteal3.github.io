@@ -55,7 +55,7 @@ h1{
 
 .prev-button,
 .next-button {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   padding: 10px;
