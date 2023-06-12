@@ -51,7 +51,7 @@ const textElement = document.querySelector('.fresh-text');
 const skipButton = document.querySelector('.skip-button');
 
 const textContent = "Well... this is where it all started before my journey to college. Entering high school, " +
-"below is the following classes that I have taken in my high school career.\n\n<div class='hs-year'>(2016-2020)</div>\n\n<b>Freshmen Year:</b>\n<u>Fall " +
+"below is the following classes that I have taken in my high school career.\n\n<div class='hs-year'>(2016-2020)</div>\n<b>Freshmen Year:</b>\n<u>Fall " +
 " Semester</u>\nWorld Geography-A\nPE High School Course I-A (9)\nIntegrated Math I-A\nBiology-A\nSpanish 3-A\nEnglish 9-A\n\n"+
 "Reflection: Went smooth and went with the flow to see how high school will play out." +
 "\n\n<u>Spring Semester</u>\nWorld Geography-B\nPE High School Course I-B (9)\nIntegrated Math I-B\nBiology-B\nSpanish 4-B\nEnglish 9-B\n"+
@@ -120,7 +120,11 @@ const textContent2 = "Hey there! This is where my career started as a software e
 "would let me be more flexible and aware to keep myself up to pace to knock out the prerequisites and requirements.\n\n<u>Winter Semester</u>\nLTWR 100 -> Intro to "+
 "Literature\n\nReflection: Asynchronous class that gave me more time to knock out the general ed requirements as well as doing myself a favor to not take it in the "+
 "future.\n\n<u>Spring Semester</u>\nCS-211 -> Computer Science II\nGEO-102 -> Oral Communication\nGEW 101B -> Writing as Rhetorical Act\nMATH-162 -> Calculus with "+
-"Applications II\nSPAN-101 -> Beginning Spanish I\n\nReflection: ";
+"Applications II\nSPAN-101 -> Beginning Spanish I\n\nReflection: By far one of the most difficult semesters I had since the load of classes were a majority to worry "+
+"about. It would make my experience much more unbalanced as I would have to learn how to sacrifice and learn how to set my priorities. Additionally, it would force me "+
+"to adjust my focus when I had to pay attention to school or with training. As this would be the final semester for online courses, this would become a difficult task "+
+"for me to know how to set my schedule for future semesters.\n\n<b>Sophomore Year:</b>\n<u>Fall Semester</u>\nBIOL-104 -> Human Biology\nCS-231 -> Assembly Language "+
+"& Digital Circuits\nCS-311 -> Data Structures & Algorithms\nMATH-270 -> Basic Discrete Math\n\nReflection: ";
 
 let skip2 = false; // Flag variable to track if skip button is clicked
 

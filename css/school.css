@@ -69,12 +69,12 @@
     right: 10px;
 }
 
-/* .table1-wrapper {
+.table1-wrapper {
     display: flex; 
     justify-content: center;
     width: 100%;
     overflow-x: auto;
-} */
+}
 
 .eagle {
     background-color: aqua;
@@ -90,7 +90,6 @@
 }
 
 .hs-card-title{
-    /* font-style: ; */
     font-weight: 900;
     text-decoration: underline;
     font-size: 3em;
