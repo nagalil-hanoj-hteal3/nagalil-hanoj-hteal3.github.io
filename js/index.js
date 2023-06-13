@@ -1,5 +1,6 @@
 const textElement = document.querySelector('.typing-text');
-const text = "Thank you for visiting my webpage. Feel free to discover more about me based on the options below. It is my pleasure to have you here!";
+const text = "Thank you for visiting my webpage. Feel free to discover more about me based on the options below. "+
+"Feel free to view the rest of the other pages of your interest! It is my pleasure to have you here! ";
 
 let index = 0;
 
@@ -27,20 +28,6 @@ function type() {
 
         // Start the date auto-typing effect
         type2();
-
-        // // Start the clock update
-        // function updateClock() {
-        //     const clockElem = document.querySelector('.clock');
-        //     const currentTime = new Date();
-        //     const hours = currentTime.getHours();
-        //     const minutes = currentTime.getMinutes();
-        //     const seconds = currentTime.getSeconds();
-        //     const formattedTime = `${hours}:${minutes}:${seconds}`;
-        //     clockElem.textContent = formattedTime;
-        // }
-
-        // // Update the clock every second (1000 milliseconds)
-        // setInterval(updateClock, 1000);
     }
 }
 // Start the first auto-typing effect

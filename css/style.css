@@ -13,6 +13,11 @@
 .typing-text{
     font-family: Georgia; 
     font-size: 20px;
+
+}
+
+.card-link{
+  text-decoration: none;
 }
 
 .header{
@@ -81,6 +86,10 @@
       font-weight: 600;
     }
     
+    .card-link{
+      text-decoration: none;
+    }
+    
     .card{
         transition: transform 0.3s;
     }
@@ -89,4 +98,4 @@
         transform: scale(1.05);
     }
     /* Other styles specific to phones */
-  }
+}
