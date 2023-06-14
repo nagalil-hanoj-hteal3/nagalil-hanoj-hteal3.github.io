@@ -65,7 +65,7 @@
     left: 10px;
     height: 90vh;
     margin-top: 45px;
-    width: 80px; /*set the width needed for the button*/
+    width: 5%; /*set the width needed for the button*/
     /* invisible button feature */
     background: none;
     border: none;
@@ -77,8 +77,8 @@
     right: 10px;
     height: 90vh;
     margin-top: 45px;
-    width: 80px; /*set the width needed for the button*/
-    /* invisible button feature */
+    width: 5%; /*set the width needed for the button*/
+    /* invisible button feature*/
     background: none;
     border: none;
     outline: none;
