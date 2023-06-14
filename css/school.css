@@ -63,10 +63,26 @@
 
 .prev-button {
     left: 10px;
-  }
+    height: 90vh;
+    margin-top: 45px;
+    width: 80px; /*set the width needed for the button*/
+    /* invisible button feature */
+    background: none;
+    border: none;
+    outline: none;
+    color: transparent;
+}
   
 .next-button {
     right: 10px;
+    height: 90vh;
+    margin-top: 45px;
+    width: 80px; /*set the width needed for the button*/
+    /* invisible button feature */
+    background: none;
+    border: none;
+    outline: none;
+    color: transparent;
 }
 
 .table1-wrapper {
@@ -139,10 +155,100 @@
     transition: opacity 0.5s ease;
 }
 
+.card3 {
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+.sdsu-text{
+    white-space: pre-line;
+    font-family: Georgia;
+    font-size: 18px;
+    color: azure;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.sdsu-logo{
+    width: 30%; /* size of the picture */
+    /* margin-left: 15px; */
+}
+
+.sdsu-card-title{
+    /* font-style: ; */
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 3em;
+    color:azure;
+}
+
+.sdsu{
+    background-color: rgb(133, 23, 23);
+    width: 100%;
+    max-width: 100%; /* Adjust the width as needed */
+    margin: 0 auto;
+}
+
+.table3-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;   
+}
+
+.card4 {
+    flex: 0 0 100%;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+    transition: opacity 0.5s ease;
+}
+
+.swc-text{
+    white-space: pre-line;
+    font-family: Georgia;
+    font-size: 18px;
+    color: azure;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.swc-logo{
+    width: 30%; /* size of the picture */
+    /* margin-left: 15px; */
+}
+
+.swc-card-title{
+    /* font-style: ; */
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 3em;
+    color:black;
+}
+
+.swc{
+    background-color: rgb(214, 189, 50);
+    width: 100%;
+    max-width: 100%; /* Adjust the width as needed */
+    margin: 0 auto;
+}
+
+.table4-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;   
+}
+
 .fade-in {
     opacity: 0;
     animation: fadeInAnimation 1s ease-in forwards;
-  }
+}
   
 @keyframes fadeInAnimation {
     from {
