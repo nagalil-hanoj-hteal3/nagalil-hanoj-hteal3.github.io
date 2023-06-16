@@ -42,7 +42,7 @@
     position: relative;
     /* width: 100%; */
     /* height: 100%; */
-    display: none;
+    /* display: none; */
     background-color: transparent;
     z-index: 2;
     transition: opacity 0.5s ease;
@@ -250,6 +250,13 @@
 }
 
 .table4-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow-x: auto;   
+}
+
+.table5-wrapper {
     display: flex;
     justify-content: center;
     width: 100%;
