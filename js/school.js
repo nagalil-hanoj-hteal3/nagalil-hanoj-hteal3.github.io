@@ -257,3 +257,18 @@ window.addEventListener('scroll', function() {
     nextButton.style.opacity = '0';
   }
 });
+
+//=========================================================================================================
+function openCard(cardId) {
+  // Hide all cards
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card) => {
+    card.style.display = 'none';
+  });
+
+  // Show the selected card
+  const selectedCard = document.getElementById(cardId);
+  if (selectedCard) {
+    selectedCard.style.display = 'block';
+  }
+}
