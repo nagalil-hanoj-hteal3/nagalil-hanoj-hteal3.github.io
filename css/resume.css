@@ -27,3 +27,8 @@ label{
     white-space: pre-line;
     font-family: 'Courier New';
 }
+
+.resume-label{
+    /* text-align: center; */
+    font-size: 18px;
+}

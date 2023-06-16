@@ -1,56 +1,12 @@
-window.addEventListener('scroll', function() {
-    var card1 = document.querySelector('.card1');
-    var card2 = document.querySelector('.card2');
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var minOpacity = 0.2; // Adjust this value to control the minimum opacity
-    
-    // Get the position and height of card1
-    var card1Position = card1.offsetTop;
-    var card1Height = card1.offsetHeight;
-
-    // Calculate the position at which card1 starts fading away
-    var fadeStart1 = card1Position + card1Height * 1.9;
-
-    // Check if the user has scrolled past card1
-    if (scrollTop > fadeStart1) {
-        card1.style.opacity = minOpacity; // Set minimum opacity
-    } else {
-        // Calculate the opacity based on scroll position for card1
-        var opacity1 = 1 - (scrollTop - card1Position) / (fadeStart1 - card1Position);
-        card1.style.opacity = opacity1;
-    }
-
-    // Get the position and height of card2
-    var card2Position = card2.offsetTop;
-    var card2Height = card2.offsetHeight;
-
-    // Calculate the position at which card2 starts fading away
-    var fadeStart2 = card2Position + card2Height * 1.9;
-
-    // Check if the user has scrolled past card2
-    if (scrollTop > fadeStart2) {
-        card2.style.opacity = minOpacity; // Set minimum opacity
-    } else {
-        // Calculate the opacity based on scroll position for card2
-        var opacity2 = 1 - (scrollTop - card2Position) / (fadeStart2 - card2Position);
-        card2.style.opacity = opacity2;
-    }
-});
-
-
-//===========================================================================================================
-
 document.addEventListener("DOMContentLoaded", function() {
-    const fadeElements = document.querySelectorAll(".fade-in");
-    for (let i = 0; i < fadeElements.length; i++) {
-      fadeElements[i].style.animationDelay = i * 0.2 + "s";
-    }
+  const fadeElements = document.querySelectorAll(".fade-in");
+  for (let i = 0; i < fadeElements.length; i++) {
+    fadeElements[i].style.animationDelay = i * 0.2 + "s";
+  }
 });
-  
-const textElement = document.querySelector('.fresh-text');
-const skipButton = document.querySelector('.skip-button');
 
-const textContent = "Well... this is where it all started before my journey to college. Entering high school, " +
+const textElement1 = document.querySelector('.fresh-text');
+const textContent1 = "Well... this is where it all started before my journey to college. Entering high school, " +
 "below is the following classes that I have taken in my high school career.\n\n<div class='hs-year'>(2016-2020)</div>\n<b>Freshmen Year:</b>\n<u>Fall " +
 " Semester</u>\nWorld Geography-A\nPE High School Course I-A (9)\nIntegrated Math I-A\nBiology-A\nSpanish 3-A\nEnglish 9-A\n\n"+
 "Reflection: Went smooth and went with the flow to see how high school will play out." +
@@ -77,42 +33,30 @@ const textContent = "Well... this is where it all started before my journey to c
 "Honors-B\nComputer Art-B\nUS Government\nPLTW Digital Electronics HN-B.\n\nReflection: With this being my final semester of high school was very unexpecting for me to comprehend what I should "+
 "prioritize and focus on as I entered college. With all the applications that I applied for, I was gladly accepted to be in California State University San Marcos to pursue a Software Engineer. "+
 "Despite that I did Digital Electronics, that is mainly focused in electrical engineering, it would require breadboard work, as well as using Java to manuever the readings with the breadboard. "+
-"When doing Java, I found it resourceful where it wouldn't require much maintenance or hardware to function something compared to breadboarding, which caught my interest to be a Software Engineer.";
-
-let skip = false; // Flag variable to track if skip button is clicked
+"When doing Java, I found it resourceful where it wouldn't require much maintenance or hardware to function something compared to breadboarding, which caught my interest to be a Software Engineer."+
+"\n\n<hr>\n<div class='rotc'>My Experience:</div>"+
+"";
+let index1 = 0;
+let skip1 = false;
 
 function type1() {
-    let substring = textContent.substring(0, index);
-    textElement.innerHTML = substring;
-    index++;
-    if (index <= textContent.length && !skip) {
-      setTimeout(type1, 25); // Adjust typing speed (milliseconds)
-    } else {
-      skipButton.style.display = 'none';
-      // setTimeout(type2, 10000);
-    }
+  let substring = textContent1.substring(0, index1);
+  textElement1.innerHTML = substring;
+  index1++;
+  if (index1 <= textContent1.length && !skip1) {
+    setTimeout(type1, 25);
+  }
 }
 
-// Function to skip the typing animation
-function skipTyping() {
-    skip = true;
-    textElement.innerHTML = textContent; // Set the entire text content
-    index = textContent.length; // Set the index to the end of the text content
-    skipButton.style.display = 'none';
+function skipTyping1() {
+  skip1 = true;
+  textElement1.innerHTML = textContent1;
+  index1 = textContent1.length;
 }
 
-// Attach event listener to the skip button
-skipButton.addEventListener('click', skipTyping);
+//===========================================================================================================================================================================================================================
 
-// Start the auto-typing effect
-let index = 0;
-type1();
-
-//=============================================================================
-  
 const textElement2 = document.querySelector('.csusm-text');
-const skipButton2 = document.querySelector('.skip-button2');
-
 const textContent2 = "Hey there! This is where my career started as a software engineering major. Currently this is my last year of my college career and is still "+
 "in the process of searching/applying internships and job opportunities to expand on my work and school expertise. The following below are the courses that I did "+
 "in sequence.\n\n<b>Freshmen Year:</b>\n<u>Fall Semester</u>\nCS-111 -> Computer Science I\nGEL-101 -> The Student University Community\nHIST-130 -> US History "+
@@ -142,132 +86,102 @@ const textContent2 = "Hey there! This is where my career started as a software e
 "would be applied into my resume and experiences for me to display for interviews and colleagues to practice more of my software engineering principles into projects. This would also "+
 "be my first semester I started working as a grader and a tutor, which expanded my knowledge of how to apply more knowledge from other peers to understand concepts in different ways.\n\n"+
 "<u>Summer Semester</u>\nPHYS-102 -> Introduction to Physics II\n\nReflection: \n\n<b>Senior Year:</b>\n<u>Fall Semester</u>\nCS-481 -> Intro to Mobile Programming\nPHIL-348 -> Ethics "+
-"in Engineering\nSE-481 -> Software Project Plan & Management\nSE-490 -> Senior Project I\n\nReflection: ";
-
-let skip2 = false; // Flag variable to track if skip button is clicked
+"in Engineering\nSE-481 -> Software Project Plan & Management\nSE-490 -> Senior Project I\n\nReflection: to be added"+
+"\n\n<hr>\n<div class='rotc'>My Experience:</div>"+
+"To be added";
+let index2 = 0;
+let skip2 = false;
 
 function type2() {
-    let substring = textContent2.substring(0, index2);
-    textElement2.innerHTML = substring;
-    index2++;
-    if (index2 <= textContent2.length && !skip2) {
-      setTimeout(type2, 25); // Adjust typing speed (milliseconds)
-    } else {
-      skipButton2.style.display = 'none';
-    }
+  let substring = textContent2.substring(0, index2);
+  textElement2.innerHTML = substring;
+  index2++;
+  if (index2 <= textContent2.length && !skip2) {
+    setTimeout(type2, 25);
+  }
 }
 
-// Function to skip the typing animation
 function skipTyping2() {
-    skip2 = true;
-    textElement2.innerHTML = textContent2; // Set the entire text content
-    index2 = textContent2.length; // Set the index to the end of the text content
-    skipButton2.style.display = 'none';
+  skip2 = true;
+  textElement2.innerHTML = textContent2;
+  index2 = textContent2.length;
 }
 
-// Attach event listener to the skip button
-skipButton2.addEventListener('click', skipTyping2);
-
-// Start the auto-typing effect
-let index2 = 0;
-type2();
-
-//===========================================================================================================
+//===========================================================================================================================================================================================================================
 
 const textElement3 = document.querySelector('.sdsu-text');
-const skipButton3 = document.querySelector('.skip-button3');
-
 const textContent3 = "Standby. Area-tenchut!\n\nAt ease. Ladies & Gentlemen, this is where my training career has been established. First off, let's begin how I was "+
 "a part of this detachment.\n\nFun story, I began this program three weeks when it first started since I was not offically enrolled into SDSU as I am a student in CSUSM. "+
 "Since I was not 'enrolled' into campus, I had to get the process complete to be in SDSU, however, since this was during COVID, this would allow me to start training.\n\n"+
-"<b>Freshmen Year:</b> Start of IMT (Initial Military Training) or Introductory Training for ROTC.\n\n<u>Fall Semester</u>\nLeadership Labratory (LLAB)\nAS-100-A\nNovember"+
+"<div class='sdsu-year'>(2020-2022)</div>\n<b>Freshmen Year:</b> Start of IMT also known as Introductory Training for ROTC.\n\n<u>Fall Semester</u>\nLeadership Labratory\nAS-100-A\nNovember"+
 "Flight\nRank: C/4C\n\nReflection: Being apart of a leadership program for the first time would be a very interesting position as there are people with different perspective of "+
 "how to approach situations. At times it can be a success or failure depending on the team as some people can get along versus others. Learning how to swallow my pride was the "+
 "one thing I had to do for not preventing any friction and sour in a team. Given that this was online, it would lack on the in person experience of controlling the flow and "+
-"not having that in person camaraderie of meeting the other cadets in person would be the drawback of this experience.\n\n<u>Spring Semester</u>\nLeadership Labratory (LLAB)\n"+
+"not having that in person camaraderie of meeting the other cadets in person would be the drawback of this experience.\n\n<u>Spring Semester</u>\nLeadership Labratory\n"+
 "AS-100-B\nMike Flight\nRank: C/4C\n\nReflection: With a new semester means a new team and new adjustments. While this would still be an online experience, same expectations "+
-"were still applied here. ";
-
-let skip3 = false; // Flag variable to track if skip button is clicked
+"were still applied here. This semester would be an introduction to next year's training for draft selection to get selected into Field Training. This would prepare myself to "+
+"go to the next step and know what must be expected as we head back in person at SDSU to continue training.\n\n<b>Sophomore Year: </b> Start of FTP also known as Field Training "+
+"Preparation.\n\n<u>Fall Semester</u>\nLeadership Labratory\nAS-200-A\nHotel Flight\nRank: C/3C\n\nReflection: Back in person! Meeting my previous teams from online would be "+
+"amazing. Especially seeing others through a mask and what they would look like in person is mind blowing. Other than that, it would be back to training and refresh material from "+
+"IMT to in person training to relearn all the stuff taught online. Although it may seem simple, it would be difficult in person as there are more obstacles to deal with as in online. "+
+"By far, in person training would be much of a blast than it was online as camaraderie would be strong and lively as well as meeting new people and create connections along the way. "+
+"As I would be more fond with training, I would also have to balance my focus with my school, which would be difficult as it would also be back in person. This would be where I have to "+
+"sacrifice school or training depending on the situation. Time would teach me a valuable lesson to know what I should prioritize more during a certain timeframe.\n\n<u>Spring Semester</u>"+
+"\nLeadership Labratory\nAS-200-B\nGolf Flight\nRank: C/3C\nJBB Org: Demon Flight for one day :)\n\nReflection: Knowing that this might be my last semester for training, I learned that it "+
+"would not be possible to do training and commuting in the same semester. Being apart of this detachment has been a great honor for me to experience. Meeting new people has helped me to "+
+"learn and grow individually to challenge my limitations to the next level whether if it is physically or mentally. This experience would also allow me to learn how to effectively lead a "+
+"team no matter the size and environment. Unfortuantely, I would not make the draft selection as I would not be present most of the time due to commuting and school work as I have entered "+
+"my upper division courses."+
+"\n\n<hr>\n<div class='rotc'>My Experience:</div>"+
+"";
+let index3 = 0;
+let skip3 = false;
 
 function type3() {
-    let substring = textContent3.substring(0, index3);
-    textElement3.innerHTML = substring;
-    index3++;
-    if (index3 <= textContent3.length && !skip3) {
-      setTimeout(type3, 25); // Adjust typing speed (milliseconds)
-    } else {
-      skipButton3.style.display = 'none';
-    }
+  let substring = textContent3.substring(0, index3);
+  textElement3.innerHTML = substring;
+  index3++;
+  if (index3 <= textContent3.length && !skip3) {
+    setTimeout(type3, 25);
+  }
 }
 
-// Function to skip the typing animation
 function skipTyping3() {
-    skip3 = true;
-    textElement3.innerHTML = textContent3; // Set the entire text content
-    index3 = textContent3.length; // Set the index to the end of the text content
-    skipButton3.style.display = 'none';
+  skip3 = true;
+  textElement3.innerHTML = textContent3;
+  index3 = textContent3.length;
 }
 
-// Attach event listener to the skip button
-skipButton3.addEventListener('click', skipTyping3);
-
-// Start the auto-typing effect
-let index3 = 0;
-type3();
-
-//===========================================================================================================
+//===========================================================================================================================================================================================================================
 
 const textElement4 = document.querySelector('.swc-text');
-const skipButton4 = document.querySelector('.skip-button4');
-
-const textContent4 = "What's up!";
-
-let skip4 = false; // Flag variable to track if skip button is clicked
+const textContent4 = "Hey there! This one will be a short one. I attended Southwestern for completing my university general ed "+
+"requirements in a cheaper cost. Down below will be what I did.\n\n<b>Summer Semester 2021</b>:\nAMD-100 -> INTRO TO ART, MEDIA "+
+"& DESIGN\nPSCI-100 -> US GOVERNMENT & POLITICS\n\nReflection: Easy credits to complete as it is fully asynchronous to complete "+
+"the course material at any time. In addition, it would be flexible to do my courses as it would easily fit in my schedule.";;
+let index4 = 0;
+let skip4 = false;
 
 function type4() {
-    let substring = textContent4.substring(0, index4);
-    textElement4.innerHTML = substring;
-    index4++;
-    if (index4 <= textContent3.length && !skip4) {
-      setTimeout(type3, 25); // Adjust typing speed (milliseconds)
-    } else {
-      skipButton4.style.display = 'none';
-    }
+  let substring = textContent4.substring(0, index4);
+  textElement4.innerHTML = substring;
+  index4++;
+  if (index4 <= textContent4.length && !skip4) {
+    setTimeout(type4, 25);
+  }
 }
 
-// Function to skip the typing animation
 function skipTyping4() {
-    skip4 = true;
-    textElement4.innerHTML = textContent4; // Set the entire text content
-    index4 = textContent4.length; // Set the index to the end of the text content
-    skipButton4.style.display = 'none';
+  skip4 = true;
+  textElement4.innerHTML = textContent4;
+  index4 = textContent4.length;
 }
 
-// Attach event listener to the skip button
-skipButton4.addEventListener('click', skipTyping4);
-
-// Start the auto-typing effect
-let index4 = 0;
-type4();
-
-//====================================================================================================================
+//===========================================================================================================================================================================================================================
 
 const cardWrapper = document.querySelector('.card-wrapper');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
-
-window.addEventListener('scroll', function() {
-  // Check if the user has scrolled enough to show the buttons
-  if (window.scrollY > 50) {
-    prevButton.style.opacity = '1';
-    nextButton.style.opacity = '1';
-  } else {
-    prevButton.style.opacity = '0';
-    nextButton.style.opacity = '0';
-  }
-});
-
 const cards = Array.from(cardWrapper.getElementsByClassName('card'));
 let currentIndex = 0;
 
@@ -292,7 +206,7 @@ function updateCardVisibility() {
 function updateIndex() {
   if (currentIndex < 0) {
     currentIndex = cards.length - 1;
-  } else if (currentIndex >= cards.length) {
+  } else if (currentIndex >=   cards.length) {
     currentIndex = 0;
   }
 }
@@ -309,6 +223,37 @@ function goToNextCard() {
   updateCardVisibility();
 }
 
+//===========================================================================================================================================================================================================================
+
+// Attach event listeners to skip buttons
+const skipButton1 = document.querySelector('.skip-button');
+skipButton1.addEventListener('click', skipTyping1);
+
+const skipButton2 = document.querySelector('.skip-button2');
+skipButton2.addEventListener('click', skipTyping2);
+
+const skipButton3 = document.querySelector('.skip-button3');
+skipButton3.addEventListener('click', skipTyping3);
+
+const skipButton4 = document.querySelector('.skip-button4');
+skipButton4.addEventListener('click', skipTyping4);
+
+// Start the auto-typing effects
+type1();
+type2();
+type3();
+type4();
+
 // Show the initial active card
 updateCardVisibility();
 
+window.addEventListener('scroll', function() {
+  // Check if the user has scrolled enough to show the buttons
+  if (window.scrollY > 50) {
+    prevButton.style.opacity = '1';
+    nextButton.style.opacity = '1';
+  } else {
+    prevButton.style.opacity = '0';
+    nextButton.style.opacity = '0';
+  }
+});

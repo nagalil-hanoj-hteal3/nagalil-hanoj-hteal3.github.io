@@ -75,79 +75,6 @@
     <br>
     <div class="container fade-in">
         <div class="card-wrapper">
-
-            <div class="card card3" style="display: block;">
-                <div class="table3-wrapper">
-                    <table class="sdsu table-borderless">
-                        <tr>
-                            <td class="text-center">
-                                <!-- Card content here -->
-                                <a href="https://det075.sdsu.edu/" target="_blank">
-                                    <img src="/file/075.png" alt="University Logo" class="sdsu-logo mt-2">
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Main content here -->
-                            <td class="content">
-                                <h5 class="sdsu-card-title text-center mt-2">Air Force ROTC</h5>
-                                <!-- <button onclick="skipTyping2()" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
-                                <p class="sdsu-text mt-4"></p>
-                                <button onclick="skipTyping3()" class="skip-button3 border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>     
-            </div>
-
-            <div class="card card4" style="display: block;">
-                <div class="table4-wrapper">
-                    <table class="swc table-borderless">
-                        <tr>
-                            <td class="text-center">
-                                <!-- Card content here -->
-                                <a href="https://www.swccd.edu/" target="_blank">
-                                    <img src="/file/swc.png" alt="College Logo" class="swc-logo mt-2">
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Main content here -->
-                            <td class="content">
-                                <h5 class="swc-card-title text-center mt-2">Southwestern College</h5>
-                                <!-- <button onclick="skipTyping2()" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
-                                <p class="swc-text mt-4"></p>
-                                <button onclick="skipTyping4()" class="skip-button4 border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>     
-            </div>
-
-            <div class="card card2" style="display: block;">
-                <div class="table2-wrapper">
-                    <table class="csusm table-borderless">
-                        <tr>
-                            <td class="text-center">
-                                <!-- Card content here -->
-                                <a href="https://www.csusm.edu/" target="_blank">
-                                    <img src="/file/csusm (2).png" alt="University Logo" class="csusm-logo mt-2">
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <!-- Main content here -->
-                            <td class="content">
-                                <h5 class="csusm-card-title text-center mt-2">California State University San Marcos</h5>
-                                <!-- <button onclick="skipTyping2()" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
-                                <p class="csusm-text mt-4"></p>
-                                <button onclick="skipTyping2()" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
-                            </td>
-                        </tr>
-                    </table>
-                </div>     
-            </div>
-
             <div class="card card1" style="display: block;">
                 <div class="table1-wrapper">
                     <table class="eagle table-borderless">
@@ -161,24 +88,92 @@
                         </tr>
                         <tr>
                             <!-- Main content here -->
-                            <td class="content">
+                            <td>
                                 <!-- <div class="content"></div> -->
                                 <h5 class="hs-card-title text-center mt-2">Olympian High School</h5>
                                 <!-- <button onclick="skipTyping()" class="skip-button border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
                                 <p class="fresh-text mt-4"></p>
-                                <button onclick="skipTyping()" class="skip-button border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
-                                <!-- </div> -->
-                                
+                                <button onclick="skipTyping()" id="skip-button" class="skip-button border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
+                                <!-- </div> --> 
                             </td>
                         </tr>
                     </table>
                 </div>   
             </div>
+            <div class="card card2" style="display: block;">
+                <div class="table2-wrapper">
+                    <table class="csusm table-borderless">
+                        <tr>
+                            <td class="text-center">
+                                <!-- Card content here -->
+                                <a href="https://www.csusm.edu/" target="_blank">
+                                    <img src="/file/csusm (2).png" alt="University Logo" class="csusm-logo mt-2">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Main content here -->
+                            <td>
+                                <h5 class="csusm-card-title text-center mt-2">California State University San Marcos</h5>
+                                <!-- <button onclick="skipTyping2()" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
+                                <p class="csusm-text mt-4"></p>
+                                <button onclick="skipTyping2()" id="skip-button2" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>     
+            </div>
+            <div class="card card3" style="display: block;">
+                <div class="table3-wrapper">
+                    <table class="sdsu table-borderless">
+                        <tr>
+                            <td class="text-center">
+                                <!-- Card content here -->
+                                <a href="https://det075.sdsu.edu/" target="_blank">
+                                    <img src="/file/075.png" alt="University Logo" class="sdsu-logo mt-2">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Main content here -->
+                            <td>
+                                <h5 class="sdsu-card-title text-center mt-2">Air Force ROTC</h5>
+                                <!-- <button onclick="skipTyping2()" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
+                                <p class="sdsu-text mt-4"></p>
+                                <button onclick="skipTyping3()" id="skip-button3" class="skip-button3 border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>     
+            </div>
 
+            <div class="card card4" style="display: block;">
+                <div class="table4-wrapper">
+                    <table class="swc table-borderless">
+                        <tr>
+                            <td>
+                                <!-- Card content here -->
+                                <a href="https://www.swccd.edu/" target="_blank">
+                                    <img src="/file/swc.png" alt="College Logo" class="swc-logo mt-2">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- Main content here -->
+                            <td>
+                                <h5 class="swc-card-title text-center mt-2">Southwestern College</h5>
+                                <!-- <button onclick="skipTyping2()" class="skip-button2 border border-danger border-3 mb-2"><u><b>Skip</b></u></button> -->
+                                <p class="swc-text mt-4"></p>
+                                <button onclick="skipTyping4()" id="skip-button4" class="skip-button4 border border-danger border-3 mb-2"><u><b>Skip</b></u></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>     
+            </div>
         </div>
-        
     </div>
 
+<!-- Both buttons will be invisible -->
 <button class="prev-button">&larr;</button>
 <button class="next-button">&rarr;</button>
 

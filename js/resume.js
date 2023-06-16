@@ -2,31 +2,26 @@
 const textElement = document.querySelector('.typing-text');
 const skipButton = document.querySelector('.skip-button');
 
-const text = `Hey there!👋👋\n\nAttached is my resume that highlights my experience consisting of my leadership, work experience, ` +
-`and relevant projects I completed in school. Throughout my career, I have continually shown a dedication to ` +
-`quality throughout my experience by providing great outcomes in teamwork and individual growth.\n\nPrior to working, I started as a cadet in Detachment 075 for the Air Force ROTC. ` +
-`The reason I joined was because of my military status that runs in my family and my curiosity of where to start after high school. Being apart of something like this provided me to be ` +
-`more strategic, take more risks, think critically, and to test the red. This program allowed me to build myself as a leader to guide my peers through execution phases and scenarios of ` +
-`everyday situations. Unfortunately, I would not be able to stay longer due to commute and time conflicts, which led me to be discharged from the program, however, relate and applying ` +
-`necessary skills and teachings my colleagues and peers have taught me will be the biggest lesson that I can ever ask.` +
-`\n\nAs I no longer had any training, I started working in my school as a STEM SC tutor to assist and teach students in computer science in a range of beginner to advanced courses. ` +
-`This opportunity would allow me to regain my past learning and effectively give the necessary tools and advice for the students. Not only am I A tutor, but also a grader for an upper  ` +
-`division course called Operating Systems. Given the knowledge that I know about that course and the projects that reflect off it allowed me to be more flexible with other tasks. Moreover, gaining ` +
-`this knowledge lets me more exposed to a variety of scenarios that can be appear in a blink of an eye varying from all sorts of levels. ` +
-`\n\nCurrently, the projects that I did consist of the following.\n1.) In my BookEZ project this involved Java and MySQL, which considered a PDF API to read files that are ` + 
-`read into the GUI to display the following receipts from eBay into an ROI (Return on Investment) Table that can be sorted and ` + 
-`imported. In addition, it runs concurrently with MySQL database to consistently update the following items from the GUI and database ` +
-`in real-time that keeps of track of a user that logs into the GUI and lists of receipts that user imports into their account.\n` +
-`2.) This project called FitRat was a shopping application that used HTML, CSS, JavaScript, and PHP. The following outside resources that were used was ChatGPT `+
-`(to find alternative solutions to implement our webpage), T-Shirt Time (allowing us to create customized clothing to display), and GitHub to utilize delayed party times. ` +
-`As the rest were simple to handle, PHP on the other hand was the biggest curve to jump over due to it being less used in today's time, but ended up getting it to `+
-`successfully work to get login and item credentials.\n3.) Given a Tetris application from my professor, my group and I were instantly tasked to develop JUnit test cases `+
-`that must be covered from the application hence allowing us to use JaCoCo (coverage tool that is covered from application and test requirements) and JUnit4 to achieve this. ` +
-`Overall, the JaCoCo score would end up being 99% total, however it would vary around 97.5-99% as it fails to not keep the rotate piece testing consistently. More information can `+
-`be found in my GitHub.👇👇\n4.) Finally, this was a unique project where I had to work in pairs to implement a UNIX shell in C++/C. In other words, this project was to create terminal/command ` + 
-`prompt to take in commands such as grep, ps -aef, ls -l, date, redirections '<' and '>', UNIX pipe '|', adding '&' within the command line and any invalid commands. `+
-`This project allowed me to practice with pair programming that can easily strengthen and improve our focus to implement the project.\nAlbeit that the number of projects that I did `+
-`are minimal, this would give me a chance to build on learning all possible outlets that I can expose myself with and later on reference to in the future.`;
+const text = "I'm a California State University San Marcos student studying software engineering with a lot of drive. "+
+"I'm now pursuing a B.S. in software engineering, and with a 3.31 GPA, I should be done in the spring of 2024. I have "+
+"developed a solid foundation in software development ideas and technologies during the course of my academic career.\n\n"+
+"In my position as a Stem SC Tutor at California State University San Marcos, I have had the opportunity to put my expertise "+
+"to use and help other students with their studies. I have assisted students in overcoming obstacles and succeeding in their "+
+"computer science courses by offering advice and helpful criticism through efficient communication and teamwork. In both lower "+
+"and upper-division classes, I have successfully assisted over 100 students.\n\nAdditionally, my work as a CS433: Operating "+
+"Systems Grader has allowed me to obtain useful expertise. I've had to grade homework assignments, keep up-to-date student records, "+
+"and help about 60 students with their coursework and test-taking throughout my time in this job. Students have benefited from my "+
+"advice and clarifications since they now comprehend the material better and do better in their coursework.\n\nIn addition, I have "+
+"contributed to a number of pertinent projects that have improved my software development abilities. For instance, I created the C "+
+"and C++ program Unix-Shell, which serves as a shell interface and simplifies user commands through different system calls. "+
+"Furthermore, I developed BookEZ, a Java application that generates ROI tables and computes net profit to make bookkeeping for eBay "+
+"sellers simpler. An SQL database for user login and a GUI for receipt uploads have to be integrated as part of this project. "+
+"Additionally, I created JUnit test cases for a Tetris video game using a variety of testing methods to obtain a high code coverage "+
+"of 99%.\n\nAlong with my technical abilities, I have a solid command of a number of languages, including Java, C++/C, JavaScript, "+
+"HTML/CSS, and SQL. I have expertise with operating systems including Windows, Unix, and Linux, as well as tools like Visual Studio "+
+"Code, JUnit4, and GitHub. I am a valued asset in the field of software engineering because of my rapid learning curve and commitment "+
+"to lifelong learning.\n\nI appreciate your taking a look at my resume. I'm interested in learning more about how my qualifications "+
+"fit your needs. Contact me at any time if you need further details or to arrange an interview.";
 
 let skip = false; // Flag variable to track if skip button is clicked
 
