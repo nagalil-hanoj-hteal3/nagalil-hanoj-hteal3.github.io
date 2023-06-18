@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+let typingInterval1;
+let typingInterval2
+let typingInterval3;
+let typingInterval4;
+
 const textElement1 = document.querySelector('.fresh-text');
 const textContent1 = "Well... this is where it all started before my journey to college. Entering high school, " +
 "below is the following classes that I have taken in my high school career.\n\n<div class='hs-year'>(2016-2020)</div>\n<b>Freshmen Year:</b>\n<u>Fall " +
@@ -36,23 +41,36 @@ const textContent1 = "Well... this is where it all started before my journey to 
 "When doing Java, I found it resourceful where it wouldn't require much maintenance or hardware to function something compared to breadboarding, which caught my interest to be a Software Engineer."+
 "\n\n<hr>\n<div class='rotc'>My Experience:</div>"+
 "";
+
 let index1 = 0;
 let skip1 = false;
+
+// Function to start typing animation for the first card
+function startTyping1() {
+  typingInterval1 = setInterval(type1, 50);
+}
 
 function type1() {
   let substring = textContent1.substring(0, index1);
   textElement1.innerHTML = substring;
   index1++;
-  if (index1 <= textContent1.length && !skip1) {
-    setTimeout(type1, 25);
+  if (index1 > textContent1.length || skip1) {
+    clearInterval(typingInterval1);
+
+    // Hide skip button when typing animation completes
+    document.getElementById('skip-button').style.display = 'none';
   }
 }
 
 function skipTyping1() {
   skip1 = true;
   textElement1.innerHTML = textContent1;
-  index1 = textContent1.length;
+  clearInterval(typingInterval1);
+  document.getElementById('skip-button').style.display = 'none';
 }
+
+// Call the typing function after a delay
+setTimeout(type1, 100); // Adjust the delay as needed
 
 //===========================================================================================================================================================================================================================
 
@@ -92,19 +110,28 @@ const textContent2 = "Hey there! This is where my career started as a software e
 let index2 = 0;
 let skip2 = false;
 
+// Function to start typing animation for the second card
+function startTyping2() {
+  typingInterval2 = setInterval(type2, 50);
+}
+
 function type2() {
   let substring = textContent2.substring(0, index2);
   textElement2.innerHTML = substring;
   index2++;
-  if (index2 <= textContent2.length && !skip2) {
-    setTimeout(type2, 25);
+  if (index2 > textContent2.length || skip2) {
+    clearInterval(typingInterval2);
+
+    // Hide skip button when typing animation completes
+    document.getElementById('skip-button2').style.display = 'none';
   }
 }
 
 function skipTyping2() {
   skip2 = true;
   textElement2.innerHTML = textContent2;
-  index2 = textContent2.length;
+  clearInterval(typingInterval2);
+  document.getElementById('skip-button2').style.display = 'none';
 }
 
 //===========================================================================================================================================================================================================================
@@ -137,19 +164,28 @@ const textContent3 = "Standby. Area-tenchut!\n\nAt ease. Ladies & Gentlemen, thi
 let index3 = 0;
 let skip3 = false;
 
+// Function to start typing animation for the second card
+function startTyping3() {
+  typingInterval3 = setInterval(type3, 50);
+}
+
 function type3() {
   let substring = textContent3.substring(0, index3);
   textElement3.innerHTML = substring;
   index3++;
-  if (index3 <= textContent3.length && !skip3) {
-    setTimeout(type3, 25);
+  if (index3> textContent3.length || skip3) {
+    clearInterval(typingInterval3);
+
+    // Hide skip button when typing animation completes
+    document.getElementById('skip-button3').style.display = 'none';
   }
 }
 
 function skipTyping3() {
   skip3 = true;
   textElement3.innerHTML = textContent3;
-  index3 = textContent3.length;
+  clearInterval(typingInterval3);
+  document.getElementById('skip-button3').style.display = 'none';
 }
 
 //===========================================================================================================================================================================================================================
@@ -159,22 +195,32 @@ const textContent4 = "Hey there! This one will be a short one. I attended Southw
 "requirements in a cheaper cost. Down below will be what I did.\n\n<b>Summer Semester 2021</b>:\nAMD-100 -> INTRO TO ART, MEDIA "+
 "& DESIGN\nPSCI-100 -> US GOVERNMENT & POLITICS\n\nReflection: Easy credits to complete as it is fully asynchronous to complete "+
 "the course material at any time. In addition, it would be flexible to do my courses as it would easily fit in my schedule.";;
+
 let index4 = 0;
 let skip4 = false;
+
+// Function to start typing animation for the second card
+function startTyping4() {
+  typingInterval4 = setInterval(type4, 50);
+}
 
 function type4() {
   let substring = textContent4.substring(0, index4);
   textElement4.innerHTML = substring;
   index4++;
-  if (index4 <= textContent4.length && !skip4) {
-    setTimeout(type4, 25);
+  if (index4 > textContent4.length || skip4) {
+    clearInterval(typingInterval4);
+
+    // Hide skip button when typing animation completes
+    document.getElementById('skip-button4').style.display = 'none';
   }
 }
 
 function skipTyping4() {
   skip4 = true;
   textElement4.innerHTML = textContent4;
-  index4 = textContent4.length;
+  clearInterval(typingInterval4);
+  document.getElementById('skip-button4').style.display = 'none';
 }
 
 //===========================================================================================================================================================================================================================
@@ -215,12 +261,34 @@ function goToPreviousCard() {
   currentIndex--;
   updateIndex();
   updateCardVisibility();
+
+  // Start typing animation for the current card
+  startTypingForCurrentCard();
 }
 
 function goToNextCard() {
   currentIndex++;
   updateIndex();
   updateCardVisibility();
+
+  // Start typing animation for the current card
+  startTypingForCurrentCard();
+}
+
+// Function to start typing animation for the current card
+function startTypingForCurrentCard() {
+  const currentCard = cards[currentIndex];
+  const cardId = currentCard.id;
+
+  if (cardId === "card-one") {
+    startTyping1();
+  } else if (cardId === "card-two") {
+    startTyping2();
+  } else if (cardId === "card-three") {
+    startTyping3();
+  } else if (cardId === "card-four") {
+    startTyping4();
+  }
 }
 
 //===========================================================================================================================================================================================================================
@@ -239,10 +307,10 @@ const skipButton4 = document.querySelector('.skip-button4');
 skipButton4.addEventListener('click', skipTyping4);
 
 // Start the auto-typing effects
-type1();
-type2();
-type3();
-type4();
+// type1();
+// type2();
+// type3();
+// type4();
 
 // Show the initial active card
 updateCardVisibility();
@@ -259,16 +327,29 @@ window.addEventListener('scroll', function() {
 });
 
 //=========================================================================================================
+// Function to handle card navigation
 function openCard(cardId) {
-  // Hide all cards
-  const cards = document.querySelectorAll('.card');
-  cards.forEach((card) => {
-    card.style.display = 'none';
-  });
+  $(".card-wrapper .card").hide();
+  $("#" + cardId).show();
 
-  // Show the selected card
-  const selectedCard = document.getElementById(cardId);
-  if (selectedCard) {
-    selectedCard.style.display = 'block';
+  if (cardId === "card-one") {
+    startTyping1();
+  } else if (cardId === "card-two") {
+    startTyping2();
+  } else if (cardId === "card-three") {
+    startTyping3();
+  } else if (cardId === "card-four") {
+    startTyping4();
   }
 }
+
+// Function to initialize the page
+function initializePage() {
+  $(".card-wrapper .card").hide();
+  $(".card5").show();
+}
+
+// Initialize the page on document ready
+$(document).ready(function() {
+  initializePage();
+});
