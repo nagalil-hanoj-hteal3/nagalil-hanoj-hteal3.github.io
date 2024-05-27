@@ -1,0 +1,35 @@
+#label1 {
+    color: rgb(61, 237, 181); 
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: "Playfair Display", serif;
+}
+
+#aboutlabel, #headerTabs{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: "Playfair Display", serif;
+}
+
+#experienceLevel, #project {
+    font-size: 24px;
+    font-weight: 800;
+    font-family: "Playfair Display", serif;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-visible {
+    opacity: 1;
+}
+
+.highlight{
+    background-color: yellow;
+}
+
+#clear-btn:hover {
+    background-color: rgb(178, 62, 62);
+}
