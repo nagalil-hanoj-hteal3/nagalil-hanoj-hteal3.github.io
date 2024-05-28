@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // carousel feature for cyber project
     var carouselElement = document.getElementById('carouselExampleCaptions2');
-    var carouselTextElement = document.getElementById('carouselText');
+    var carouselTextElement = document.getElementById('carouselText2');
 
     var updateCarouselText = function() {
         var activeItem = carouselElement.querySelector('.carousel-item.active');
