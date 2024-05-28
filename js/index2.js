@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // fade in element
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -19,6 +20,23 @@ document.addEventListener('DOMContentLoaded', function() {
     fadeInElements.forEach(element => {
         observer.observe(element);
     });
+    // ==========================================
+
+    // carousel feature for cyber project
+    var carouselElement = document.getElementById('carouselExampleCaptions2');
+    var carouselTextElement = document.getElementById('carouselText');
+
+    var updateCarouselText = function() {
+        var activeItem = carouselElement.querySelector('.carousel-item.active');
+        var description = activeItem.getAttribute('data-description');
+        carouselTextElement.textContent = description;
+    };
+
+    carouselElement.addEventListener('slid.bs.carousel', updateCarouselText);
+
+    // Initialize the text on page load
+    updateCarouselText();
+
 });
 
 let currentIndex = 0;
