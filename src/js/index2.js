@@ -37,6 +37,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the text on page load
     updateCarouselText();
 
+    const progressBar = document.querySelector('#progress-bar div');
+
+    window.addEventListener('scroll', function () {
+        const scrollTop = this.document.documentElement.scrollTop || this.document.body.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        progressBar.style.width = scrollPercent + '%';
+    });
+
+    new bootstrap.ScrollSpy(document.body, {
+        target: '#navbarScroll2',
+        offset: 56
+    });
+
 });
 
 let currentIndex = 0;
@@ -54,10 +69,7 @@ function performSearch() {
         if (matches.length > 0) {
             highlightMatches();
             navigateMatches();
-        } 
-        // else {
-        //     showPopover();
-        // }
+        }
     } else {
         navigateMatches();
     }
@@ -66,15 +78,52 @@ function performSearch() {
 function updateMatches() {
     clearHighlights();
     const elements = document.querySelectorAll('p, label, li');
+    const navElement = document.getElementById('navbarScroll2');
+    const form = document.querySelector('form[role="search"]');
+    const searchInput = document.getElementById('search-input');
+
     matches = [];
     const regex = new RegExp(currentSearchTerm, 'ig'); // Match any substring, not just whole words
     elements.forEach(element => {
-        const text = element.textContent.toLowerCase();
-        let match;
-        while ((match = regex.exec(text)) !== null) {
-            matches.push({ element, startIndex: match.index, length: currentSearchTerm.length });
+        if (!navElement.contains(element)) {
+            const text = element.textContent.toLowerCase();
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                matches.push({ element, startIndex: match.index, length: currentSearchTerm.length });
+            }
         }
     });
+
+    // If no matches are found, display the popover message
+    if (matches.length === 0) {
+        let messageElement = document.getElementById('no-match-popover');
+        
+        // Create the span for the popover if it doesn't exist
+        if (!messageElement) {
+            messageElement = document.createElement('span');
+            messageElement.id = 'no-match-popover';
+            messageElement.className = 'd-inline-block';
+            messageElement.tabIndex = 0;
+            form.insertBefore(messageElement, searchInput.nextSibling);
+        }
+
+        messageElement.setAttribute('data-bs-toggle', 'popover');
+        messageElement.setAttribute('data-bs-trigger', 'manual');
+        messageElement.setAttribute('data-bs-content', 'Word Not Found in the searchbar');
+        messageElement.setAttribute('data-bs-placement', 'bottom');
+        messageElement.style.display = 'inline-block';
+        messageElement.style.position = 'absolute';
+        messageElement.style.marginLeft = '15%';
+        messageElement.style.marginTop = '2.5%';
+
+        const popover = new bootstrap.Popover(messageElement);
+        popover.show();
+
+        // Hide the popover after a delay
+        setTimeout(() => {
+            popover.hide();
+        }, 3000);
+    }
 }
 
 function clearHighlights() {
@@ -85,6 +134,11 @@ function clearHighlights() {
         parent.normalize(); // Combine adjacent text nodes
     });
     matches = [];
+
+    const messageElement = document.getElementById('no-match-message');
+    if (messageElement) {
+        messageElement.remove();
+    }
 }
 
 function highlightMatches() {
@@ -138,14 +192,6 @@ function clearSearch() {
     currentSearchTerm = '';
     currentIndex = 0;
 }
-
-// function showPopover() {
-//     const popoverButton = document.getElementById('popover-btn');
-//     $(popoverButton).popover('show');
-//     setTimeout(() => {
-//         $(popoverButton).popover('hide');
-//     }, 2000);
-// }
 
 document.getElementById('search-input').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
