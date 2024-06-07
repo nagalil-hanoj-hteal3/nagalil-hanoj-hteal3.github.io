@@ -52,6 +52,19 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 56
     });
 
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+
+    // Optionally, hide the popover when clicking outside
+    document.addEventListener('click', function (e) {
+        popoverList.forEach(function (popover) {
+            if (!e.target.closest('[data-bs-toggle="popover"]')) {
+                popover.hide();
+            }
+        });
+    });
 });
 
 let currentIndex = 0;

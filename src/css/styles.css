@@ -48,3 +48,9 @@
     width: 0;
     background-color: #198754; /* Change the color as needed */
 }
+
+.card .skydive, .card .pga, .card .nfl, .card .nba, .card .mlb,
+.card .hike, .card .read, .card .swim, .card .guitar, .card .game, .card .drum,
+.card .playingcard, .card .drive, .card .run, .card .gym, .card .golf, .card .ball{
+    border: none; /* Remove border */
+}
